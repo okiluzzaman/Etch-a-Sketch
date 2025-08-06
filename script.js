@@ -75,7 +75,11 @@ btnCreateCanvas.addEventListener("click", (dets) => {
 function resetCanvas(){
   reset.addEventListener("click", (dets)=>{
     defaultCanvas.textContent = "";
-    createcanvas(userInputValue);
+    if(!userInputValue){
+      createcanvas(16);
+    }else{
+      createcanvas(userInputValue);
+    }
   })
 }
 
